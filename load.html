@@ -5,8 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cargar Movimiento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    
+    <div id="main-cont">
+        <div id="main-menu">
+            <div>
+                <a href="index.html"><i class="fa fa-arrow-left"></i></a>
+            </div>
+        </div>
+        <form name="submit-form">
+            <!-- id	fecha	hs_entrega	hs_retiro	hs_trabajo_i	hs_trabajo_f	id_avion	hs_trabajo	operador -->
+            <!-- <input name="email" type="email" placeholder="Email" required> -->
+            <input type="date" name="fecha_i" id="fecha-i" required>
+            <input type="date" name="fecha_f" id="fecha-f" required>
+            <input type="time" name="hs_entrega" id="hs_entrega" required>
+            <input type="time" name="hs_retiro" id="hs_retiro" required>
+            <input type="number" name="hs_trabajo_i" id="hs_trabajo_i" placeholder="Horas de trabajo ini." required>
+            <input type="number" name="hs_trabajo_f" id="hs_trabajo_f" placeholder="Horas de trabajo fin" required>
+            <label for="id_avion"></label>
+            <select name="id_avion" id="id_avion" required>
+                <option value="TC-32">TC-32</option>
+                <option value="TC-52">TC-52</option>
+                <option value="TC-53">TC-53</option>
+                <option value="TC-61">TC-61</option>
+                <option value="TC-66">TC-66</option>
+                <option value="TC-69">TC-69</option>
+                <option value="TC-70">TC-70</option>
+                <option value="TC-99">TC-99</option>
+                <option value="Pampa">Pampa</option>
+                <option value="Pucara">Pucara</option>
+                <option value="Saab">Saab</option>
+                <option value="Twin">Twin</option>
+                <option value="Tucano">Tucano</option>
+                <option value="Texan">Texan</option>
+            </select>
+            <label for="operador"></label>
+            <select name="operador" id="operador" required>
+                <option value="Turzi">Turzi</option>
+                <option value="Visentin">Angelino</option>
+                <option value="Ramos">Ramos</option>
+                <option value="Seco">Seco</option>
+                <option value="Lima">Lima</option>
+                <option value="Ceballos">Ceballos</option>
+                <option value="Herrera">Herrera</option>
+                <option value="Gonzales">Gonzales</option>
+            </select>
+            <button type="submit">Send</button>
+        </form>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxs1YgF1N54FRD2eJ2y0_7jhkhEqLwgi1FLMHRFUARWhcXXGYp2CFZQZqijOyYTUJqN/exec'
+            const form = document.forms['submit-form']
+            form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+    </div>
 </body>
 </html>
