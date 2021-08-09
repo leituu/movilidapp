@@ -11,53 +11,54 @@
 <body>
     <div id="main-cont">
         <div id="main-menu">
-            <div>
-                <a href="index.html"><i class="fa fa-arrow-left"></i></a>
+            <div class="top-header">
+                <a href="index.html"><i class="fa fa-arrow-left fa-lg icon"></i></a>
             </div>
         </div>
-        <form name="submit-form">
-            <!-- id	fecha	hs_entrega	hs_retiro	hs_trabajo_i	hs_trabajo_f	id_avion	hs_trabajo	operador -->
-            <!-- <input name="email" type="email" placeholder="Email" required> -->
-            <label for="fecha_i"><input type="date" name="fecha_i" id="fecha-i" required></label>
-            <input type="date" name="fecha_f" id="fecha-f" required>
-            <input type="time" name="hs_entrega" id="hs_entrega" required>
-            <input type="time" name="hs_retiro" id="hs_retiro" required>
-            <input type="number" name="hs_trabajo_i" id="hs_trabajo_i" placeholder="Horas de trabajo ini." required>
-            <input type="number" name="hs_trabajo_f" id="hs_trabajo_f" placeholder="Horas de trabajo fin" required>
-            <label for="id_avion">
-                <select name="id_avion" id="id_avion" required>
-                    <option value="Avion" disabled="disabled" selected>Avion</option>
-                    <option value="TC-32">TC-32</option>
-                    <option value="TC-52">TC-52</option>
-                    <option value="TC-53">TC-53</option>
-                    <option value="TC-61">TC-61</option>
-                    <option value="TC-66">TC-66</option>
-                    <option value="TC-69">TC-69</option>
-                    <option value="TC-70">TC-70</option>
-                    <option value="TC-99">TC-99</option>
-                    <option value="Pampa">Pampa</option>
-                    <option value="Pucara">Pucara</option>
-                    <option value="Saab">Saab</option>
-                    <option value="Twin">Twin</option>
-                    <option value="Tucano">Tucano</option>
-                    <option value="Texan">Texan</option>
-                </select>
-            </label>
-            <label for="operador">
-                <select name="operador" id="operador" required>
-                    <option value="Operador" disabled="disabled" selected>Operador</option>
-                    <option value="Turzi">Turzi</option>
-                    <option value="Visentin">Angelino</option>
-                    <option value="Ramos">Ramos</option>
-                    <option value="Seco">Seco</option>
-                    <option value="Lima">Lima</option>
-                    <option value="Ceballos">Ceballos</option>
-                    <option value="Herrera">Herrera</option>
-                    <option value="Gonzales">Gonzales</option>
-                </select>
-            </label>
-            <button id= "enviar" type="submit">Send</button>
-        </form>
+        <div id="form-cont">
+            <form class= "form-displ" name="submit-form">
+                <!-- id	fecha	hs_entrega	hs_retiro	hs_trabajo_i	hs_trabajo_f	id_avion	hs_trabajo	operador -->
+                <label class="form-elem form-elem-desc" for="fecha_i"><span>Fecha colocacion: </span><input class= "inp-elem" type="date" name="fecha_i" id="fecha-i" required></label>
+                <label class="form-elem form-elem-desc" for="hs_entrega"><span>Hora colocacion: </span><input class= "inp-elem" type="time" name="hs_entrega" id="hs_entrega" required></label>
+                <label class="form-elem form-elem-desc" for="fecha_f"><span>Fecha retiro: </span><input class= "inp-elem" type="date" name="fecha_f" id="fecha-f" required></label>
+                <label class="form-elem form-elem-desc" for="hs_retiro"><span>Hora retiro: </span><input class= "inp-elem" type="time" name="hs_retiro" id="hs_retiro" required></label>
+                <label class="form-elem form-elem-desc" for="hs_trabajo_i"><span>Horas inicio: </span><input class= "inp-elem" type="number" name="hs_trabajo_i" id="hs_trabajo_i" placeholder="Horas de trabajo ini." required></label>
+                <label class="form-elem form-elem-desc" for="hs_trabajo_f"><span>Horas fin: </span><input class= "inp-elem" type="number" name="hs_trabajo_f" id="hs_trabajo_f" placeholder="Horas de trabajo fin" required></label>
+                <label class="form-elem-desc" for="id_avion">
+                    <select class="drop-dwn-elem" name="id_avion" id="id_avion" required>
+                        <option value="Avion" disabled="disabled" selected>Avion</option>
+                        <option value="TC-32">TC-32</option>
+                        <option value="TC-52">TC-52</option>
+                        <option value="TC-53">TC-53</option>
+                        <option value="TC-61">TC-61</option>
+                        <option value="TC-66">TC-66</option>
+                        <option value="TC-69">TC-69</option>
+                        <option value="TC-70">TC-70</option>
+                        <option value="TC-99">TC-99</option>
+                        <option value="Pampa">Pampa</option>
+                        <option value="Pucara">Pucara</option>
+                        <option value="Saab">Saab</option>
+                        <option value="Twin">Twin</option>
+                        <option value="Tucano">Tucano</option>
+                        <option value="Texan">Texan</option>
+                    </select>
+                </label>
+                <label class="form-elem-desc" for="operador">
+                    <select class="drop-dwn-elem" name="operador" id="operador" required>
+                        <option value="Operador" disabled="disabled" selected>Operador</option>
+                        <option value="Turzi">Turzi</option>
+                        <option value="Visentin">Angelino</option>
+                        <option value="Ramos">Ramos</option>
+                        <option value="Seco">Seco</option>
+                        <option value="Lima">Lima</option>
+                        <option value="Ceballos">Ceballos</option>
+                        <option value="Herrera">Herrera</option>
+                        <option value="Gonzales">Gonzales</option>
+                    </select>
+                </label>
+                <button id= "submit" type="submit">Cargar Movimiento</button>
+            </form>
+        </div>
     <script src="movilidad.js"></script>
     </div>
 </body>

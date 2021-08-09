@@ -1,0 +1,59 @@
+body {
+    margin:0;
+}
+
+#main-cont {
+    min-width: 400px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.top-header {
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left: 5px; 
+    background-color: #C8DAE4;
+    /* background-color: ; */
+}
+
+.icon {
+    color: black;
+}
+
+#form-cont {
+    margin: 10px 5px
+}
+
+.form-displ {
+    display: flex;
+    flex-direction: column;
+    /* margin: 0px 5px; */
+}
+
+.form-elem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-elem-desc {
+    margin: 5px 0px;
+}
+
+.inp-elem {
+    width: 150px;
+}
+
+.drop-dwn-elem {
+    display: block;
+    width: 250px;
+    margin: auto;
+}
+
+span {
+    align-self: center;
+}
+
+#submit {
+    width: 250px;
+    margin:  15px auto 15px auto;
+}
